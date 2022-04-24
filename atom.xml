@@ -38,4 +38,25 @@
     
   </entry>
   
+  <entry>
+    <title>spring的注解</title>
+    <link href="http://example.com/2021/09/05/spring%E7%9A%84%E6%B3%A8%E8%A7%A3/"/>
+    <id>http://example.com/2021/09/05/spring%E7%9A%84%E6%B3%A8%E8%A7%A3/</id>
+    <published>2021-09-04T18:00:42.000Z</published>
+    <updated>2022-04-24T18:08:49.669Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Spring原始注解"><a href="#Spring原始注解" class="headerlink" title="Spring原始注解"></a>Spring原始注解</h2><p>Spring原始注解主要是替代<Bean>的配置</Bean></p><p><img src="/2021/09/05/spring%E7%9A%84%E6%B3%A8%E8%A7%A3/image-20220425020400770.png" alt="image-20220425020400770"></p><p>使用注解进行开发时，需要在applicationContext.xml中配置组件扫描，作用是指定哪个包及其子包下的Bean需要进行扫描以便识别使用注解配置的类、字段和方法。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">&quot;com.itheima&quot;</span>&gt;</span>&lt;/context: component-scan&gt;</span><br></pre></td></tr></table></figure><h2 id="Spring新注解"><a href="#Spring新注解" class="headerlink" title="Spring新注解"></a>Spring新注解</h2><p>使用上面的注解还不能全部替代xml配置文件，还需要使用注解替代的配置如下:</p><ul><li>非自定义的Bean的配置: &lt; bean&gt;</li><li>加载properties文件的配置: &lt; context:property-placeholder &gt;</li><li>组件扫描的配置: &lt; context:component-scan &gt;</li><li>引入其他文件: &lt; import &gt;</li></ul><p><img src="/2021/09/05/spring%E7%9A%84%E6%B3%A8%E8%A7%A3/image-20220425020812734.png" alt="image-20220425020812734"></p><h2 id="引入其他配置文件（分模块开发）"><a href="#引入其他配置文件（分模块开发）" class="headerlink" title="引入其他配置文件（分模块开发）"></a>引入其他配置文件（分模块开发）</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; import resource=&quot;applicationcontext-xxx. xml&quot;/&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Spring原始注解&quot;&gt;&lt;a href=&quot;#Spring原始注解&quot; class=&quot;headerlink&quot; title=&quot;Spring原始注解&quot;&gt;&lt;/a&gt;Spring原始注解&lt;/h2&gt;&lt;p&gt;Spring原始注解主要是替代&lt;Bean&gt;的配置&lt;/Bean&gt;&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
 </feed>
