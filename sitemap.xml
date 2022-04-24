@@ -37,6 +37,15 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://example.com/2022/03/05/%E9%98%BF%E6%96%AF%E9%A1%BF%E5%8F%91%E5%A3%AB%E5%A4%A7%E5%A4%AB%E6%92%92%E6%94%BE%E6%95%A3%E9%98%80/</loc>
+    
+    <lastmod>2022-04-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>http://example.com/</loc>
