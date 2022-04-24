@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/</loc>
+    
+    <lastmod>2022-04-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/</loc>
+    
+    <lastmod>2022-04-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/</loc>
+    
+    <lastmod>2022-04-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2021/09/10/spring%E7%9A%84Ioc/</loc>
     
     <lastmod>2022-04-24</lastmod>

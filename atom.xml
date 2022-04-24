@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-24T17:25:05.451Z</updated>
+  <updated>2022-04-24T19:30:55.883Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>springmvc的数据请求</title>
+    <link href="http://example.com/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/"/>
+    <id>http://example.com/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/</id>
+    <published>2022-09-14T18:54:39.000Z</published>
+    <updated>2022-04-24T19:30:55.883Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425031516981.png" alt="image-20220425031516981"></p><h1 id="springmvc的数据请求（往后传）"><a href="#springmvc的数据请求（往后传）" class="headerlink" title="springmvc的数据请求（往后传）"></a>springmvc的数据请求（往后传）</h1><h2 id="获得请求参数"><a href="#获得请求参数" class="headerlink" title="获得请求参数"></a>获得请求参数</h2><h3 id="请求参数的类型"><a href="#请求参数的类型" class="headerlink" title="请求参数的类型"></a>请求参数的类型</h3><h4 id="获得基本类型参数"><a href="#获得基本类型参数" class="headerlink" title="获得基本类型参数"></a>获得基本类型参数</h4><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425031917682.png" alt="image-20220425031917682"></p><h4 id="获得pojo类型参数"><a href="#获得pojo类型参数" class="headerlink" title="获得pojo类型参数"></a>获得pojo类型参数</h4><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032002413.png" alt="image-20220425032002413"></p><h4 id="获得数组类型参数"><a href="#获得数组类型参数" class="headerlink" title="获得数组类型参数"></a>获得数组类型参数</h4><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032108549.png" alt="image-20220425032108549"></p><h4 id="获得集合类型参数"><a href="#获得集合类型参数" class="headerlink" title="获得集合类型参数"></a>获得集合类型参数</h4><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032213000.png" alt="image-20220425032213000"></p><h3 id="参数绑定注解-RequestParam"><a href="#参数绑定注解-RequestParam" class="headerlink" title="参数绑定注解@RequestParam"></a>参数绑定注解@RequestParam</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032311511.png" alt="image-20220425032311511"></p><h3 id="restful风格"><a href="#restful风格" class="headerlink" title="restful风格"></a>restful风格</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032329209.png" alt="image-20220425032329209"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032336310.png" alt="image-20220425032336310"></p><h3 id="获得servlet相关api"><a href="#获得servlet相关api" class="headerlink" title="获得servlet相关api"></a>获得servlet相关api</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032346648.png" alt="image-20220425032346648"></p><h3 id="获得请求头信息"><a href="#获得请求头信息" class="headerlink" title="获得请求头信息"></a>获得请求头信息</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032401411.png" alt="image-20220425032401411"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032410310.png" alt="image-20220425032410310"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032417431.png" alt="image-20220425032417431"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032424474.png" alt="image-20220425032424474"></p><h3 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h3><h4 id="静态资源的开启"><a href="#静态资源的开启" class="headerlink" title="静态资源的开启"></a>静态资源的开启</h4><p>因为是前端控制器找资源（找方法的路径），无法找到静态资源</p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032510998.png" alt="image-20220425032510998"></p><p>方法二：<br>当前端控制器找不到，让原始容器tomcat去找</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;mvc: default-servlet-handler/&gt;</span><br></pre></td></tr></table></figure><h4 id="配置全局乱码过滤器"><a href="#配置全局乱码过滤器" class="headerlink" title="配置全局乱码过滤器"></a>配置全局乱码过滤器</h4><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032624911.png" alt="image-20220425032624911"></p><h4 id="自定义类型转换器"><a href="#自定义类型转换器" class="headerlink" title="自定义类型转换器"></a>自定义类型转换器</h4><p>SpringMVC默认已经提供了一些常用的类型转换器，例如客户端提交的字符串转换成int型进行参数设置。但是不是所有的数据类型都提供了转换器，没有提供的就需要自定义转换器，例如:日期类型的数据就需要自定义转换器。</p><p>自定义类型转换器的开发步骤:<br>1.定义转换器类实现Converter接口）<br>2.在配置文件中声明转换器<br>3.在<annotation-driven>中引用转换器</annotation-driven></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032756509.png" alt="image-20220425032756509"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032807758.png" alt="image-20220425032807758"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032824070.png" alt="image-20220425032824070"></p><h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><h3 id="文件上传原理"><a href="#文件上传原理" class="headerlink" title="文件上传原理"></a>文件上传原理</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032834163.png" alt="image-20220425032834163"></p><h3 id="单文件上传"><a href="#单文件上传" class="headerlink" title="单文件上传"></a>单文件上传</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032856331.png" alt="image-20220425032856331"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032913690.png" alt="image-20220425032913690"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032925538.png" alt="image-20220425032925538"></p><h3 id="多文件上传"><a href="#多文件上传" class="headerlink" title="多文件上传"></a>多文件上传</h3><p>多文件上传，只需要将页面修改为多个文件上传项，将方法参数MultipartFile类型修改为MultipartFile[]即可</p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425033003816.png" alt="image-20220425033003816"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425033010210.png" alt="image-20220425033010210"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425031516981.png&quot; alt=&quot;image-20220425031516981&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>springmvc的数据响应</title>
+    <link href="http://example.com/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/"/>
+    <id>http://example.com/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/</id>
+    <published>2022-09-14T18:53:57.000Z</published>
+    <updated>2022-04-24T19:14:54.762Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030120894.png" alt="image-20220425030120894"></p><h1 id="springmvc的数据响应（往前传）"><a href="#springmvc的数据响应（往前传）" class="headerlink" title="springmvc的数据响应（往前传）"></a>springmvc的数据响应（往前传）</h1><h2 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h2><h3 id="转发和重定向的区别"><a href="#转发和重定向的区别" class="headerlink" title="转发和重定向的区别"></a>转发和重定向的区别</h3><p>转发：</p><p>地址栏不发生变化，显示的是上一个页面的地址<br>请求次数：只有1次请求<br>根目录：<a href="http://localhost:8080/%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80/%EF%BC%8C%E5%8C%85%E5%90%AB%E4%BA%86%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80">http://localhost:8080/项目地址/，包含了项目的访问地址</a><br>请求域中数据不会丢失</p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030346442.png" alt="image-20220425030346442"></p><p>重定向：</p><p>地址栏：显示新的地址<br>请求次数：2次<br>根目录：<a href="http://localhost:8080/">http://localhost:8080/</a> 没有项目的名字<br>请求域中的数据会丢失，因为是2次请求</p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030416929.png" alt="image-20220425030416929"></p><h3 id="直接返回字符串形式"><a href="#直接返回字符串形式" class="headerlink" title="直接返回字符串形式"></a>直接返回字符串形式</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030511128.png" alt="image-20220425030511128"></p><h3 id="返回modeAndview形式"><a href="#返回modeAndview形式" class="headerlink" title="返回modeAndview形式"></a>返回modeAndview形式</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030543294.png" alt="image-20220425030543294"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030554039.png" alt="image-20220425030554039"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030612690.png" alt="image-20220425030612690"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030620199.png" alt="image-20220425030620199"></p><h2 id="回写数据"><a href="#回写数据" class="headerlink" title="回写数据"></a>回写数据</h2><h3 id="直接回写字符串"><a href="#直接回写字符串" class="headerlink" title="直接回写字符串"></a>直接回写字符串</h3><p>Web基础阶段，客户端访问服务器端，如果想直接回写字符串作为响应体返回的话，只需要使用<br>response.getWriter().print(“hello world”)即可<br>通过SpringMVC框架注入的response对象，使用response.getWriter().print(“hello world”)回写数<br>据，此时不需要视图跳转，业务方法返回值为void。</p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030704866.png" alt="image-20220425030704866"></p><p>将需要回写的字符串直接返回，但此时需要通过eResponseBody注解告知SpringMVC框架，方法<br>返回的字符串不是跳转是直接在http响应体中返回。</p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030728991.png" alt="image-20220425030728991"></p><h3 id="返回json字符串"><a href="#返回json字符串" class="headerlink" title="返回json字符串"></a>返回json字符串</h3><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030918490.png" alt="image-20220425030918490"></p><p>配置自动转换json格式的处理适配器</p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425031346641.png" alt="image-20220425031346641"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425031353346.png" alt="image-20220425031353346"></p><p><img src="/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425031403035.png" alt="image-20220425031403035"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/image-20220425030120894.png&quot; alt=&quot;image-20220425030120894&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>springmvc简介</title>
+    <link href="http://example.com/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/"/>
+    <id>http://example.com/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/</id>
+    <published>2022-09-09T18:51:41.000Z</published>
+    <updated>2022-04-24T19:00:38.584Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025507677.png" alt="image-20220425025507677"></p><h1 id="springmvc是什么"><a href="#springmvc是什么" class="headerlink" title="springmvc是什么"></a>springmvc是什么</h1><ul><li>SpringMVC是一种基于Java的实现MVC设计模型的请求驱动类型的轻量级Web框架，</li><li>它通过一套注解，让一个简单的Java类成为处理请求的控制器，而无须实现任何接口。</li><li>同时它还支持RESTful编程风格的请求。</li></ul><h1 id="springmvc原理及开发步骤"><a href="#springmvc原理及开发步骤" class="headerlink" title="springmvc原理及开发步骤"></a>springmvc原理及开发步骤</h1><p><img src="/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025556593.png" alt="image-20220425025556593"></p><p><img src="/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025610016.png" alt="image-20220425025610016"></p><p><img src="/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025618478.png" alt="image-20220425025618478"></p><p><img src="/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025631452.png" alt="image-20220425025631452"></p><h1 id="springweb环境的配置"><a href="#springweb环境的配置" class="headerlink" title="springweb环境的配置"></a>springweb环境的配置</h1><p><img src="/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025844120.png" alt="image-20220425025844120"></p><p><img src="/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025858300.png" alt="image-20220425025858300"></p><p><img src="/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025905633.png" alt="image-20220425025905633"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/09/10/springmvc%E7%AE%80%E4%BB%8B/image-20220425025507677.png&quot; alt=&quot;image-20220425025507677&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;springmvc是什么&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Git常用命令</title>
