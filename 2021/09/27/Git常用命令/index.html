@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Git常用命令 | WHC 的个人博客</title><meta name="author" content="whc"><meta name="copyright" content="whc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Git工作流程图 基础操作指令1git init  创建文件并提交12345git add .git commit -m &amp;#x27;commit 01&amp;#x27;#查看日志git log  修改文件并提交123#修改文件内容git add .git commit ---m &amp;#x27;update file01&amp;#x27;    将最后一次修改还原1git reset commitId --h">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Git常用命令 | WHC 的个人博客</title><meta name="author" content="whc"><meta name="copyright" content="whc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Git工作流程图 基础操作指令1git init  创建文件并提交12345git add .git commit -m &amp;#x27;commit 01&amp;#x27;#查看日志git log  修改文件并提交123#修改文件内容git add .git commit ---m &amp;#x27;update file01&amp;#x27;    将最后一次修改还原1git reset commitId">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令">
 <meta property="og:url" content="http://example.com/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="WHC 的个人博客">
-<meta property="og:description" content="Git工作流程图 基础操作指令1git init  创建文件并提交12345git add .git commit -m &amp;#x27;commit 01&amp;#x27;#查看日志git log  修改文件并提交123#修改文件内容git add .git commit ---m &amp;#x27;update file01&amp;#x27;    将最后一次修改还原1git reset commitId --h">
+<meta property="og:description" content="Git工作流程图 基础操作指令1git init  创建文件并提交12345git add .git commit -m &amp;#x27;commit 01&amp;#x27;#查看日志git log  修改文件并提交123#修改文件内容git add .git commit ---m &amp;#x27;update file01&amp;#x27;    将最后一次修改还原1git reset commitId">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://raulzk7ek.hn-bkt.clouddn.com/img/30465AB5B811FE11FCE1FF246E6CFBF7.png">
 <meta property="article:published_time" content="2021-09-27T14:59:40.000Z">
-<meta property="article:modified_time" content="2022-04-24T15:06:16.393Z">
+<meta property="article:modified_time" content="2022-04-24T15:27:34.310Z">
 <meta property="article:author" content="whc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://raulzk7ek.hn-bkt.clouddn.com/img/30465AB5B811FE11FCE1FF246E6CFBF7.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
@@ -52,7 +52,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-04-24 23:06:16'
+  postUpdate: '2022-04-24 23:27:34'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,7 +142,11 @@
     }
     detectApple()
     })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="WHC 的个人博客" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/cat-32326.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://raulzk7ek.hn-bkt.clouddn.com/img/30465AB5B811FE11FCE1FF246E6CFBF7.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WHC 的个人博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git常用命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2021-09-27T14:59:40.000Z" title="发表于 2021-09-27 22:59:40">2021-09-27</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "/img/loading.gif" data-lazy-src="C:/Users/Whc/Desktop/md笔记/img/30465AB5B811FE11FCE1FF246E6CFBF7-16508116051413.png" alt="预览图"></p>
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/cat-32326.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://raulzk7ek.hn-bkt.clouddn.com/img/30465AB5B811FE11FCE1FF246E6CFBF7.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WHC 的个人博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git常用命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2021-09-27T14:59:40.000Z" title="发表于 2021-09-27 22:59:40">2021-09-27</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><meta name="referrer" content="no-referrer"/>
+
+
+
+<p><img src= "/img/loading.gif" data-lazy-src="C:/Users/Whc/Desktop/md笔记/img/30465AB5B811FE11FCE1FF246E6CFBF7-16508116051413.png" alt="预览图"></p>
 <h2 id="Git工作流程图"><a href="#Git工作流程图" class="headerlink" title="Git工作流程图"></a>Git工作流程图</h2><p><img src= "/img/loading.gif" data-lazy-src="http://raulzk7ek.hn-bkt.clouddn.com/img/IMG_0783.PNG" alt="IMG_0783"></p>
 <h2 id="基础操作指令"><a href="#基础操作指令" class="headerlink" title="基础操作指令"></a>基础操作指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
