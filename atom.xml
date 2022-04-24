@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-24T17:25:05.451Z</updated>
+  <updated>2022-04-24T18:27:18.424Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>spring的Ioc</title>
+    <link href="http://example.com/2022/04/25/spring%E7%9A%84Ioc/"/>
+    <id>http://example.com/2022/04/25/spring%E7%9A%84Ioc/</id>
+    <published>2022-04-24T18:13:45.000Z</published>
+    <updated>2022-04-24T18:27:18.424Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/04/25/spring%E7%9A%84Ioc/image-20220425022718381.png" alt="image-20220425022718381"></p><h1 id="Spring的IOC（控制反转）"><a href="#Spring的IOC（控制反转）" class="headerlink" title="Spring的IOC（控制反转）"></a>Spring的IOC（控制反转）</h1><h2 id="spring简介"><a href="#spring简介" class="headerlink" title="spring简介"></a>spring简介</h2><h3 id="Spring是什么"><a href="#Spring是什么" class="headerlink" title="Spring是什么"></a>Spring是什么</h3><ol><li>Spring是轻量级开源框架，它是很多模块的集合 ，以loC(反转控制)和AOP(面向切面编程)为内核。</li><li>旨在提高开发人员的开发效率以及系统的可维护性</li><li>这些模块是核心容器、数据访问&#x2F;集成、Web、AOP（面向切面编程）、工具、消息和测试模块。</li><li>比如Core Container中的Core组件是Spring所有组件的核心，Beans组件和Context组件是实现IOC和DI的基础，AOP组件用来实现面向切面编程。</li></ol><h3 id="Spring的优势"><a href="#Spring的优势" class="headerlink" title="Spring的优势"></a>Spring的优势</h3><p>1)方便解耦，简化开发<br>2)AOP编程的支持<br>3)声明式事务的支持<br>4)方便程序的测试<br>5)方便集成各种优秀框架<br>6)降低JavaEE AP1的使用难度<br>7)Java源码是经典学习范例</p><h3 id="spring的开发步骤"><a href="#spring的开发步骤" class="headerlink" title="spring的开发步骤"></a>spring的开发步骤</h3><ul><li>导入 Spring开发的基本包坐标</li><li>编写Dao接口和实现类</li><li>创建Spring 核心配置文件      </li><li>在Spring 配置文件中配置UserDaolmpl</li><li>使用Spring 的API获得 Bean 实例</li></ul><p><img src="/2022/04/25/spring%E7%9A%84Ioc/image-20220425022024093.png" alt="image-20220425022024093"></p><h2 id="Bean"><a href="#Bean" class="headerlink" title="Bean"></a>Bean</h2><h3 id="Bean标签范围配置"><a href="#Bean标签范围配置" class="headerlink" title="Bean标签范围配置"></a>Bean标签范围配置</h3><p>用于配置对象交由Spring来创建。<br>默认情况下它调用的是类中的无参构造函数，如果没有无参构造函数则不能创建成功。<br>基本属性:</p><ul><li>id : Bean实例在Spring容器中的唯─标识</li><li>class: Bean的全限定名称</li><li><img src="/2022/04/25/spring%E7%9A%84Ioc/image-20220425022225407.png" alt="image-20220425022225407"></li></ul><p>当scope的取值为singleton时<br>Bean的实例化个数：1个<br>Bean的实例化时机：当Spring核心文件被加载时，实例化配置的Bean实例<br>Bean的生命周期：<br> 对象创建：当应用加载，创建容器时，对象就被创建了<br> 对象运行：只要容器在，对象一直活着<br> 对象销毁：当应用卸载，销毁容器时，对象就被销毁了<br>2）当scope的取值为prototype时<br>Bean的实例化个数：多个<br>Bean的实例化时机：当调用getBean()方法时实例化Bean<br> 对象创建：当使用对象时，创建新的对象实例<br> 对象运行：只要对象在使用中，就一直活着<br> 对象销毁：当对象长时间不用时，被 Java 的垃圾回收器回收了</p><h3 id="Bean实例化三种方式"><a href="#Bean实例化三种方式" class="headerlink" title="Bean实例化三种方式"></a>Bean实例化三种方式</h3><p><img src="/2022/04/25/spring%E7%9A%84Ioc/image-20220425022353002.png" alt="image-20220425022353002"></p><p><img src="/2022/04/25/spring%E7%9A%84Ioc/image-20220425022402296.png" alt="image-20220425022402296"></p><p><img src="/2022/04/25/spring%E7%9A%84Ioc/image-20220425022411827.png" alt="image-20220425022411827"></p><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><p>IOC（Inversion Of Controll，控制反转）是一种设计思想，就是将原本在程序中手动创建对象的控制权，交给IOC容器来管理，并由IOC容器完成对象的注入。这样可以很大程度上简化应用的开发，把应用从复杂的依赖关系中解放出来。IOC容器就像是一个工厂一样，当我们需要创建一个对象的时候，只需要配置好配置文件&#x2F;注解即可，完全不用考虑对象是如何被创建出来的。</p><h2 id="DI-依赖注入"><a href="#DI-依赖注入" class="headerlink" title="DI 依赖注入"></a>DI 依赖注入</h2><p>依赖注入(Dependency Injection) :它是Spring框架核心IOC的具体实现。<br>在编写程序时，通过控制反转，把对象的创建交给了Spring，但是代码中不可能出现没有依赖的情况。IOC解耦只是降低他们的依赖关系，但不会消除。例如:业务层仍会调用持久层的方法。<br>那这种业务层和持久层的依赖关系，在使用Spring之后，就让Spring来维护了。<br>简单的说，就是坐等框架把持久层对象传入业务层，而不用我们自己去获取。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.it.dao.impl.UserDaoImpl&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userservice&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.it.service.imp1.UserServiceImpl&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;userDao&quot;</span> / &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/04/25/spring%E7%9A%84Ioc/image-20220425022718381.png&quot; alt=&quot;image-20220425022718381&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Spring的IOC（控制反转）&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Git常用命令</title>

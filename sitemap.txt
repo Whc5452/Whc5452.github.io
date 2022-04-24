@@ -1,3 +1,4 @@
+http://example.com/2022/04/25/spring%E7%9A%84Ioc/
 http://example.com/2021/09/05/spring%E7%9A%84%E6%B3%A8%E8%A7%A3/
 http://example.com/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/
 http://example.com/
