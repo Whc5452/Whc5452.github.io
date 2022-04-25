@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>动态sql | WHC 的个人博客</title><meta name="author" content="whc"><meta name="copyright" content="whc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="动态sql动态sql标签if标签 foreach标签 sql片段抽取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动态sql">
+<meta property="og:url" content="http://example.com/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:site_name" content="WHC 的个人博客">
+<meta property="og:description" content="动态sql动态sql标签if标签 foreach标签 sql片段抽取">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?cs=srgb&dl=pexels-thisisengineering-3861969.jpg&fm=jpg">
+<meta property="article:published_time" content="2022-10-09T03:10:23.000Z">
+<meta property="article:modified_time" content="2022-04-25T03:48:18.429Z">
+<meta property="article:author" content="whc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?cs=srgb&dl=pexels-thisisengineering-3861969.jpg&fm=jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '动态sql',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-25 11:48:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="WHC 的个人博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/cat-32326.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?cs=srgb&amp;dl=pexels-thisisengineering-3861969.jpg&amp;fm=jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WHC 的个人博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">动态sql</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2022-10-09T03:10:23.000Z" title="发表于 2022-10-09 11:10:23">2022-10-09</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "/img/loading.gif" data-lazy-src="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114555992.png" alt="image-20220425114555992"></p>
+<h1 id="动态sql"><a href="#动态sql" class="headerlink" title="动态sql"></a>动态sql</h1><h2 id="动态sql标签"><a href="#动态sql标签" class="headerlink" title="动态sql标签"></a>动态sql标签</h2><h3 id="if标签"><a href="#if标签" class="headerlink" title="if标签"></a>if标签</h3><p><img src= "/img/loading.gif" data-lazy-src="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114657461.png" alt="image-20220425114657461"></p>
+<h3 id="foreach标签"><a href="#foreach标签" class="headerlink" title="foreach标签"></a>foreach标签</h3><p><img src= "/img/loading.gif" data-lazy-src="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114711638.png" alt="image-20220425114711638"></p>
+<h2 id="sql片段抽取"><a href="#sql片段抽取" class="headerlink" title="sql片段抽取"></a>sql片段抽取</h2><p><img src= "/img/loading.gif" data-lazy-src="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114737370.png" alt="image-20220425114737370"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">whc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/">http://example.com/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">WHC 的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?cs=srgb&amp;dl=pexels-thisisengineering-3861969.jpg&amp;fm=jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"><img class="prev-cover" src= "/img/loading.gif" data-lazy-src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?cs=srgb&amp;dl=pexels-athena-2582937.jpg&amp;fm=jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Mybatis核心配置文件</div></div></a></div><div class="next-post pull-right"><a href="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/"><img class="next-cover" src= "/img/loading.gif" data-lazy-src="https://images.pexels.com/photos/3862634/pexels-photo-3862634.jpeg?cs=srgb&amp;dl=pexels-thisisengineering-3862634.jpg&amp;fm=jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Mybatis的dao层实现</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/cat-32326.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">whc</div><div class="author-info__description">在我一生的黄金时代，我有好多奢望。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81sql"><span class="toc-number">1.</span> <span class="toc-text">动态sql</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81sql%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.</span> <span class="toc-text">动态sql标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.1.</span> <span class="toc-text">if标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#foreach%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.2.</span> <span class="toc-text">foreach标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sql%E7%89%87%E6%AE%B5%E6%8A%BD%E5%8F%96"><span class="toc-number">1.2.</span> <span class="toc-text">sql片段抽取</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/" title="Mybatis的注解开发">Mybatis的注解开发</a><time datetime="2022-10-11T03:11:52.000Z" title="发表于 2022-10-11 11:11:52">2022-10-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/" title="Mybatis的多表操作">Mybatis的多表操作</a><time datetime="2022-10-09T03:11:27.000Z" title="发表于 2022-10-09 11:11:27">2022-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Mybatis核心配置文件">Mybatis核心配置文件</a><time datetime="2022-10-09T03:10:57.000Z" title="发表于 2022-10-09 11:10:57">2022-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/" title="动态sql">动态sql</a><time datetime="2022-10-09T03:10:23.000Z" title="发表于 2022-10-09 11:10:23">2022-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/" title="Mybatis的dao层实现">Mybatis的dao层实现</a><time datetime="2022-10-04T03:09:49.000Z" title="发表于 2022-10-04 11:09:49">2022-10-04</time></div></div></div></div></div></div></main><footer id="footer" style="background: #333333"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By whc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div></div></body></html>

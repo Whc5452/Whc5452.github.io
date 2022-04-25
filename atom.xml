@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-25T03:04:13.061Z</updated>
+  <updated>2022-04-25T04:05:02.443Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,129 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mybatis的注解开发</title>
+    <link href="http://example.com/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/"/>
+    <id>http://example.com/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/</id>
+    <published>2022-10-11T03:11:52.000Z</published>
+    <updated>2022-04-25T04:05:02.443Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120059888.png" alt="image-20220425120059888"></p><h2 id="mybatis常用注解"><a href="#mybatis常用注解" class="headerlink" title="mybatis常用注解"></a>mybatis常用注解</h2><p>@Insert:实现新增@Update:实现更新Delete:实现删除<br>@Select:实现查询<br>@Result:实现结果集封装<br>@Results: 可以与@Resuit一起使用，封装多个结果集<br>@One:实现一对一结果集封装<br>@Many:实现一对多结果集封装</p><h2 id="xml完成基本的CRUD"><a href="#xml完成基本的CRUD" class="headerlink" title="xml完成基本的CRUD"></a>xml完成基本的CRUD</h2><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120207783.png" alt="image-20220425120207783"></p><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120215489.png" alt="image-20220425120215489"></p><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120225344.png" alt="image-20220425120225344"></p><h2 id="一对一的注解开发"><a href="#一对一的注解开发" class="headerlink" title="一对一的注解开发"></a>一对一的注解开发</h2><p>实现复杂关系映射之前我们可以在映射文件中通过配置<resultMap>来实现，使用注解开发后，我们可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置</resultMap></p><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120246622.png" alt="image-20220425120246622"></p><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120322978.png" alt="image-20220425120322978"></p><p>第二种两段式查询</p><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120335126.png" alt="image-20220425120335126"></p><h2 id="一对多注解开发"><a href="#一对多注解开发" class="headerlink" title="一对多注解开发"></a>一对多注解开发</h2><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120353588.png" alt="image-20220425120353588"></p><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120408404.png" alt="image-20220425120408404"></p><h2 id="多对多注解开发"><a href="#多对多注解开发" class="headerlink" title="多对多注解开发"></a>多对多注解开发</h2><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120431663.png" alt="image-20220425120431663"></p><p><img src="/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120502376.png" alt="image-20220425120502376"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/10/11/Mybatis%E7%9A%84%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/image-20220425120059888.png&quot; alt=&quot;image-20220425120059888&quot;&gt;&lt;/p</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis的多表操作</title>
+    <link href="http://example.com/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/</id>
+    <published>2022-10-09T03:11:27.000Z</published>
+    <updated>2022-04-25T03:59:46.259Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id><a href="#" class="headerlink" title></a><img src="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115640322.png" alt="image-20220425115640322"></h2><h1 id="Myatis的多表操作"><a href="#Myatis的多表操作" class="headerlink" title="Myatis的多表操作"></a>Myatis的多表操作</h1><h2 id="一对一配置实现"><a href="#一对一配置实现" class="headerlink" title="一对一配置实现"></a>一对一配置实现</h2><p>MyBatis多表配置方式:</p><p>一对一配置:使用<resultMap>做配置<br>一对多配置:使用<resultMap> +<collection>做配置<br>多对多配置:使用<resultMap>+<collection>做配置</collection></resultMap></collection></resultMap></resultMap></p><p><img src="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115747462.png" alt="image-20220425115747462"></p><p><img src="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115755359.png" alt="image-20220425115755359"></p><p><img src="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115803237.png" alt="image-20220425115803237"></p><p> 第二种配置方式</p><p><img src="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115816780.png" alt="image-20220425115816780"></p><h2 id="一对多配置实现"><a href="#一对多配置实现" class="headerlink" title="一对多配置实现"></a>一对多配置实现</h2><p><img src="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115848197.png" alt="image-20220425115848197"></p><h2 id="多对多配置实现"><a href="#多对多配置实现" class="headerlink" title="多对多配置实现"></a>多对多配置实现</h2><p><img src="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115923254.png" alt="image-20220425115923254"></p><p><img src="/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115931051.png" alt="image-20220425115931051"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;img src=&quot;/2022/10/09/Mybatis%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/image-20220425115</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis核心配置文件</title>
+    <link href="http://example.com/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"/>
+    <id>http://example.com/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</id>
+    <published>2022-10-09T03:10:57.000Z</published>
+    <updated>2022-04-25T03:54:41.416Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425114915216.png" alt="image-20220425114915216"></p><h1 id="mybatis核心配置文件"><a href="#mybatis核心配置文件" class="headerlink" title="mybatis核心配置文件"></a>mybatis核心配置文件</h1><h2 id="environments标签"><a href="#environments标签" class="headerlink" title="environments标签"></a>environments标签</h2><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115030177.png" alt="image-20220425115030177"></p><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115054032.png" alt="image-20220425115054032"></p><h2 id="mapper标签"><a href="#mapper标签" class="headerlink" title="mapper标签"></a>mapper标签</h2><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115125277.png" alt="image-20220425115125277"></p><h2 id="properties标签"><a href="#properties标签" class="headerlink" title="properties标签"></a>properties标签</h2><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115143954.png" alt="image-20220425115143954"></p><h2 id="typeAliases标签"><a href="#typeAliases标签" class="headerlink" title="typeAliases标签"></a>typeAliases标签</h2><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115200649.png" alt="image-20220425115200649"></p><h2 id="typeHandlers标签"><a href="#typeHandlers标签" class="headerlink" title="typeHandlers标签"></a>typeHandlers标签</h2><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115227687.png" alt="image-20220425115227687"></p><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115236485.png" alt="image-20220425115236485"></p><p>注册</p><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115252294.png" alt="image-20220425115252294"></p><h2 id="plugins标签（PageHelper）"><a href="#plugins标签（PageHelper）" class="headerlink" title="plugins标签（PageHelper）"></a>plugins标签（PageHelper）</h2><p>MyBatis可以使用第三方的插件来对功能进行扩展，分页助手PageHelper是将分页的复杂操作进行封装，使用简单的方式即可获得分页的相关数据<br>开发步骤:<br>1 导入通用PageHelper的坐标</p><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115326945.png" alt="image-20220425115326945"></p><p>2 在mybatis核心配置文件中配置PageHelper插件</p><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115343765.png" alt="image-20220425115343765"></p><p>3 测试分页数据获取</p><p><img src="/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425115441320.png" alt="image-20220425115441320"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/10/09/Mybatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/image-20220425114915216.png&quot; alt=&quot;image-2022042511491</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>动态sql</title>
+    <link href="http://example.com/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/"/>
+    <id>http://example.com/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/</id>
+    <published>2022-10-09T03:10:23.000Z</published>
+    <updated>2022-04-25T03:48:18.429Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114555992.png" alt="image-20220425114555992"></p><h1 id="动态sql"><a href="#动态sql" class="headerlink" title="动态sql"></a>动态sql</h1><h2 id="动态sql标签"><a href="#动态sql标签" class="headerlink" title="动态sql标签"></a>动态sql标签</h2><h3 id="if标签"><a href="#if标签" class="headerlink" title="if标签"></a>if标签</h3><p><img src="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114657461.png" alt="image-20220425114657461"></p><h3 id="foreach标签"><a href="#foreach标签" class="headerlink" title="foreach标签"></a>foreach标签</h3><p><img src="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114711638.png" alt="image-20220425114711638"></p><h2 id="sql片段抽取"><a href="#sql片段抽取" class="headerlink" title="sql片段抽取"></a>sql片段抽取</h2><p><img src="/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114737370.png" alt="image-20220425114737370"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/10/09/Mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6/image-20220425114555992.png&quot; alt=&quot;image-20220425114555992&quot;&gt;&lt;/p&gt;
+&lt;h1 id=</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis的dao层实现</title>
+    <link href="http://example.com/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://example.com/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/</id>
+    <published>2022-10-04T03:09:49.000Z</published>
+    <updated>2022-04-25T03:43:57.286Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114357257.png" alt="image-20220425114357257"></p><h1 id="Mybatisl的Dao层实现方式"><a href="#Mybatisl的Dao层实现方式" class="headerlink" title="Mybatisl的Dao层实现方式"></a>Mybatisl的Dao层实现方式</h1><h2 id="传统实现方式"><a href="#传统实现方式" class="headerlink" title="传统实现方式"></a>传统实现方式</h2><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114000032.png" alt="image-20220425114000032"></p><p>核心配置文件</p><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114019042.png" alt="image-20220425114019042"></p><p>映射文件</p><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114041810.png" alt="image-20220425114041810"></p><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114051084.png" alt="image-20220425114051084"></p><p>接口</p><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114116849.png" alt="image-20220425114116849"></p><p>实现</p><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114134198.png" alt="image-20220425114134198"></p><p>调用并且运行</p><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114150231.png" alt="image-20220425114150231"></p><h2 id="核心配置文件"><a href="#核心配置文件" class="headerlink" title="核心配置文件"></a>核心配置文件</h2><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114231050.png" alt="image-20220425114231050"></p><p>1.代理开发方式介绍<br>采用Mybatis的代理开发方式实现DAO层的开发，这种方式是我们后面进入企业的主流。<br>Mapper接口开发方法只需要程序员编写Mapper接口(相当于Dao接口)，由Mybatis框架根据接口定义创建接口的动态代理对象，代理对象的方法体同上边Dao接口实现类方法。</p><p>Maprer接口开发需要遵循以下规范:<br>1、Mapper.xml文件中的namespace与mapper接口的全限定名相同<br>2、Mapper接口方法名和Mapper.xml中定义的每个statement的id相同<br>3、Mapper接口方法的输入参数类型和mapper.xml中定义的每个sql的parameterType的类型相同4、Mapper接口方法的输出参数类mapper.xml中定义的每个sql的resultType的类型相同</p><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114330558.png" alt="image-20220425114330558"></p><p><img src="/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114336309.png" alt="image-20220425114336309"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/10/04/Mybatis%E7%9A%84dao%E5%B1%82%E5%AE%9E%E7%8E%B0/image-20220425114357257.png&quot; alt=&quot;image-20220425114357257&quot;&gt;&lt;/p&gt;
+&lt;h1 </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mybatis入门操作</title>
+    <link href="http://example.com/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/</id>
+    <published>2022-10-03T03:09:15.000Z</published>
+    <updated>2022-04-25T03:37:46.252Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425112943293.png" alt="image-20220425112943293"></p><h1 id="Mybatis入门操作"><a href="#Mybatis入门操作" class="headerlink" title="Mybatis入门操作"></a>Mybatis入门操作</h1><h2 id="原始jdbc操作"><a href="#原始jdbc操作" class="headerlink" title="原始jdbc操作"></a>原始jdbc操作</h2><p>原始jdbc开发存在的问题如下:<br>数据库连接创建、释放频繁造成系统资源浪费从而影响系统性能sql语句在代码中硬编码，造成代码不易维护，实际应用sql变化的可能较大，sql变动需要改变java代码.<br>查询操作时，需要手动将结果集中的数据手动封装到实体中。插入操作时，需要手动将实体的数据设置到sql语句的占位符位置<br>应对上述问题给出的解决方案:<br>使用数据库连接池初始化连接资源<br>将sql语句抽取到xml配置文件中<br>使用反射、内省等底层技术，自动将实体与表进行属性与字段的自动映射</p><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425112955764.png" alt="image-20220425112955764"></p><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113003233.png" alt="image-20220425113003233"></p><h2 id="什么是mybatis"><a href="#什么是mybatis" class="headerlink" title="什么是mybatis"></a>什么是mybatis</h2><ul><li>mybatis是一个优秀的基于java的持久层框架，<strong>它内部封装了jdbc</strong>，使开发者只需要关注sql语句本身，而不需要花费精力去处理加载驱动、创建连接、创建statement等繁杂的过程。</li><li>**mybatis通过xml或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中sql的动态参数进行心映射生成最终执行的sql语句。</li><li><strong>最后mybatis框架执行sql并将结果映射为java对象并返回</strong>。采用ORM思想解决了实体和数据库映射的问题，对jdbc进行了封装，屏蔽了jdbc api 底层访问细节，使我们不用与jdbc api打交道，就可以完成对数据库的持久化操作。</li></ul><h2 id="MyBatis开发步骤"><a href="#MyBatis开发步骤" class="headerlink" title="MyBatis开发步骤:"></a>MyBatis开发步骤:</h2><p>1·添加MyBatis的坐标</p><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113252515.png" alt="image-20220425113252515"></p><p> 2.创建user数据表编写User实体类</p><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113316045.png" alt="image-20220425113316045"></p><p>3,编写映射文件UserMapper.xml</p><p>映射文件Mapper约束头</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span><br><span class="line">        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span><br></pre></td></tr></table></figure><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113354321.png" alt="image-20220425113354321"></p><p>4.编写核心文件SqlMapConfig.xml</p><p>核心配置文件约束头</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">        PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">        &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">       &lt;configuration&gt;</span><br></pre></td></tr></table></figure><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113422604.png" alt="image-20220425113422604"></p><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113428599.png" alt="image-20220425113428599"></p><p>5,编写测试类</p><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113443757.png" alt="image-20220425113443757"></p><h2 id="mybatis的增删改查"><a href="#mybatis的增删改查" class="headerlink" title="mybatis的增删改查"></a>mybatis的增删改查<img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113515668.png" alt="image-20220425113515668"></h2><p>3.插入操作注意问题·</p><p>插入语句使用insert标签<br>·在映射文件中使用parameterType属性指定要插入的数据类型.<br> Sql语句中使用#{实体属性名方式引用实体中的属性值<br>·插入操作使用的API是sqlSession.insert(“命名空间.id”,实体对象);<br>·插入操作涉及数据库数据变化，所以要使用sqlSession对象显示的提交事务，即sqlSession.commit()</p><h2 id="mybatis相应API"><a href="#mybatis相应API" class="headerlink" title="mybatis相应API"></a>mybatis相应API</h2><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113724573.png" alt="image-20220425113724573"></p><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113732169.png" alt="image-20220425113732169"></p><p><img src="/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425113746188.png" alt="image-20220425113746188"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/10/03/mybatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220425112943293.png&quot; alt=&quot;image-20220425112943293&quot;&gt;&lt;/p&gt;
+&lt;h1 id=</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>springmvc异常处理机制</title>
@@ -29,28 +152,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/09/25/springmvc%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/image-20220425103948702.png&quot; alt=&quot;image-20220425103</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Git常用命令</title>
-    <link href="http://example.com/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://example.com/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2021-09-27T14:59:40.000Z</published>
-    <updated>2022-04-24T17:25:05.451Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p><img src="/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/30465AB5B811FE11FCE1FF246E6CFBF7.png" alt="30465AB5B811FE11FCE1FF246E6CFBF7"></p><h2 id="Git工作流程图"><a href="#Git工作流程图" class="headerlink" title="Git工作流程图"></a>Git工作流程图</h2><p><img src="/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/IMG_0783.PNG" alt="IMG_0783"></p><h2 id="基础操作指令"><a href="#基础操作指令" class="headerlink" title="基础操作指令"></a>基础操作指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><h3 id="创建文件并提交"><a href="#创建文件并提交" class="headerlink" title="创建文件并提交"></a>创建文件并提交</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;commit 01&#x27;</span><br><span class="line"></span><br><span class="line">#查看日志</span><br><span class="line">git log</span><br></pre></td></tr></table></figure><h3 id="修改文件并提交"><a href="#修改文件并提交" class="headerlink" title="修改文件并提交"></a>修改文件并提交</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#修改文件内容</span><br><span class="line">git add .</span><br><span class="line">git commit ---m &#x27;update file01&#x27;</span><br></pre></td></tr></table></figure><h3 id="将最后一次修改还原"><a href="#将最后一次修改还原" class="headerlink" title="将最后一次修改还原"></a>将最后一次修改还原</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset commitId --hard</span><br></pre></td></tr></table></figure><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="创建并切换到dev1分支-在dev01分支提交"><a href="#创建并切换到dev1分支-在dev01分支提交" class="headerlink" title="创建并切换到dev1分支,在dev01分支提交"></a>创建并切换到dev1分支,在dev01分支提交</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#创建分支</span><br><span class="line">git branch dev01</span><br><span class="line">#切换分支</span><br><span class="line">git checkout dev01</span><br><span class="line">#提交分支</span><br><span class="line">git add .</span><br><span class="line">git commit -m &#x27;add file on dev&#x27;</span><br></pre></td></tr></table></figure><h3 id="切換到-master分支-将dev1合并到-master分支"><a href="#切換到-master分支-将dev1合并到-master分支" class="headerlink" title="切換到 master分支,将dev1合并到 master分支"></a>切換到 master分支,将dev1合并到 master分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev01</span><br></pre></td></tr></table></figure><h3 id="删除dev分支"><a href="#删除dev分支" class="headerlink" title="删除dev分支"></a>删除dev分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev01</span><br></pre></td></tr></table></figure><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="将本地仓库推送到远程仓库"><a href="#将本地仓库推送到远程仓库" class="headerlink" title="将本地仓库推送到远程仓库"></a>将本地仓库推送到远程仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@gitee.com/**/**.git</span><br><span class="line">git push --set-upstream origin master</span><br></pre></td></tr></table></figure><h3 id="将远程仓库克隆到本地"><a href="#将远程仓库克隆到本地" class="headerlink" title="将远程仓库克隆到本地"></a>将远程仓库克隆到本地</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#克隆到git_test文件夹</span><br><span class="line">git clone git@gitee.com/**/**.git git_test</span><br></pre></td></tr></table></figure><h3 id="将本地修改推送到远程仓库"><a href="#将本地修改推送到远程仓库" class="headerlink" title="将本地修改推送到远程仓库"></a>将本地修改推送到远程仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;add file03&#x27;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><h3 id="将远程仓库的修改更新到本地"><a href="#将远程仓库的修改更新到本地" class="headerlink" title="将远程仓库的修改更新到本地"></a>将远程仓库的修改更新到本地</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-
-&lt;p&gt;&lt;img src=&quot;/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/30465AB5B811FE11FCE1FF246E6CF</summary>
       
     
     
@@ -236,6 +337,28 @@
       
     <summary type="html">&lt;h2 id=&quot;Spring原始注解&quot;&gt;&lt;a href=&quot;#Spring原始注解&quot; class=&quot;headerlink&quot; title=&quot;Spring原始注解&quot;&gt;&lt;/a&gt;Spring原始注解&lt;/h2&gt;&lt;p&gt;Spring原始注解主要是替代&lt;Bean&gt;的配置&lt;/Bean&gt;&lt;/p&gt;
 &lt;p</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Git常用命令</title>
+    <link href="http://example.com/2021/08/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2021/08/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2021-08-27T14:59:40.000Z</published>
+    <updated>2022-04-25T03:24:17.437Z</updated>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p><img src="/2021/08/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/30465AB5B811FE11FCE1FF246E6CFBF7.png" alt="30465AB5B811FE11FCE1FF246E6CFBF7"></p><h2 id="Git工作流程图"><a href="#Git工作流程图" class="headerlink" title="Git工作流程图"></a>Git工作流程图</h2><p><img src="/2021/08/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/IMG_0783.PNG" alt="IMG_0783"></p><h2 id="基础操作指令"><a href="#基础操作指令" class="headerlink" title="基础操作指令"></a>基础操作指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><h3 id="创建文件并提交"><a href="#创建文件并提交" class="headerlink" title="创建文件并提交"></a>创建文件并提交</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;commit 01&#x27;</span><br><span class="line"></span><br><span class="line">#查看日志</span><br><span class="line">git log</span><br></pre></td></tr></table></figure><h3 id="修改文件并提交"><a href="#修改文件并提交" class="headerlink" title="修改文件并提交"></a>修改文件并提交</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#修改文件内容</span><br><span class="line">git add .</span><br><span class="line">git commit ---m &#x27;update file01&#x27;</span><br></pre></td></tr></table></figure><h3 id="将最后一次修改还原"><a href="#将最后一次修改还原" class="headerlink" title="将最后一次修改还原"></a>将最后一次修改还原</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset commitId --hard</span><br></pre></td></tr></table></figure><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="创建并切换到dev1分支-在dev01分支提交"><a href="#创建并切换到dev1分支-在dev01分支提交" class="headerlink" title="创建并切换到dev1分支,在dev01分支提交"></a>创建并切换到dev1分支,在dev01分支提交</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#创建分支</span><br><span class="line">git branch dev01</span><br><span class="line">#切换分支</span><br><span class="line">git checkout dev01</span><br><span class="line">#提交分支</span><br><span class="line">git add .</span><br><span class="line">git commit -m &#x27;add file on dev&#x27;</span><br></pre></td></tr></table></figure><h3 id="切換到-master分支-将dev1合并到-master分支"><a href="#切換到-master分支-将dev1合并到-master分支" class="headerlink" title="切換到 master分支,将dev1合并到 master分支"></a>切換到 master分支,将dev1合并到 master分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev01</span><br></pre></td></tr></table></figure><h3 id="删除dev分支"><a href="#删除dev分支" class="headerlink" title="删除dev分支"></a>删除dev分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev01</span><br></pre></td></tr></table></figure><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="将本地仓库推送到远程仓库"><a href="#将本地仓库推送到远程仓库" class="headerlink" title="将本地仓库推送到远程仓库"></a>将本地仓库推送到远程仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@gitee.com/**/**.git</span><br><span class="line">git push --set-upstream origin master</span><br></pre></td></tr></table></figure><h3 id="将远程仓库克隆到本地"><a href="#将远程仓库克隆到本地" class="headerlink" title="将远程仓库克隆到本地"></a>将远程仓库克隆到本地</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#克隆到git_test文件夹</span><br><span class="line">git clone git@gitee.com/**/**.git git_test</span><br></pre></td></tr></table></figure><h3 id="将本地修改推送到远程仓库"><a href="#将本地修改推送到远程仓库" class="headerlink" title="将本地修改推送到远程仓库"></a>将本地修改推送到远程仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;add file03&#x27;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><h3 id="将远程仓库的修改更新到本地"><a href="#将远程仓库的修改更新到本地" class="headerlink" title="将远程仓库的修改更新到本地"></a>将远程仓库的修改更新到本地</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+
+&lt;p&gt;&lt;img src=&quot;/2021/08/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/30465AB5B811FE11FCE1FF246E6CF</summary>
       
     
     
