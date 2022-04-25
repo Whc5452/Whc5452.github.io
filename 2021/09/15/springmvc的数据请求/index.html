@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>springmvc的数据请求 | WHC 的个人博客</title><meta name="author" content="whc"><meta name="copyright" content="whc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="springmvc的数据请求（往后传）获得请求参数请求参数的类型获得基本类型参数 获得pojo类型参数 获得数组类型参数 获得集合类型参数 参数绑定注解@RequestParam restful风格  获得servlet相关api 获得请求头信息    基础配置静态资源的开启因为是前端控制器找资源（找方法的路径），无法找到静态资源  方法二：当前端控制器找不到，让原始容器tomcat去找 1&amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springmvc的数据请求">
+<meta property="og:url" content="http://example.com/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/index.html">
+<meta property="og:site_name" content="WHC 的个人博客">
+<meta property="og:description" content="springmvc的数据请求（往后传）获得请求参数请求参数的类型获得基本类型参数 获得pojo类型参数 获得数组类型参数 获得集合类型参数 参数绑定注解@RequestParam restful风格  获得servlet相关api 获得请求头信息    基础配置静态资源的开启因为是前端控制器找资源（找方法的路径），无法找到静态资源  方法二：当前端控制器找不到，让原始容器tomcat去找 1&amp;l">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.pexels.com/photos/2110951/pexels-photo-2110951.jpeg?cs=srgb&dl=pexels-emre-can-acer-2110951.jpg&fm=jpg">
+<meta property="article:published_time" content="2021-09-14T18:54:39.000Z">
+<meta property="article:modified_time" content="2022-04-24T19:33:44.027Z">
+<meta property="article:author" content="whc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.pexels.com/photos/2110951/pexels-photo-2110951.jpeg?cs=srgb&dl=pexels-emre-can-acer-2110951.jpg&fm=jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'springmvc的数据请求',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-25 03:33:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="WHC 的个人博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/cat-32326.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images.pexels.com/photos/2110951/pexels-photo-2110951.jpeg?cs=srgb&amp;dl=pexels-emre-can-acer-2110951.jpg&amp;fm=jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WHC 的个人博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">springmvc的数据请求</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2021-09-14T18:54:39.000Z" title="发表于 2021-09-15 02:54:39">2021-09-15</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425031516981.png" alt="image-20220425031516981"></p>
+<h1 id="springmvc的数据请求（往后传）"><a href="#springmvc的数据请求（往后传）" class="headerlink" title="springmvc的数据请求（往后传）"></a>springmvc的数据请求（往后传）</h1><h2 id="获得请求参数"><a href="#获得请求参数" class="headerlink" title="获得请求参数"></a>获得请求参数</h2><h3 id="请求参数的类型"><a href="#请求参数的类型" class="headerlink" title="请求参数的类型"></a>请求参数的类型</h3><h4 id="获得基本类型参数"><a href="#获得基本类型参数" class="headerlink" title="获得基本类型参数"></a>获得基本类型参数</h4><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425031917682.png" alt="image-20220425031917682"></p>
+<h4 id="获得pojo类型参数"><a href="#获得pojo类型参数" class="headerlink" title="获得pojo类型参数"></a>获得pojo类型参数</h4><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032002413.png" alt="image-20220425032002413"></p>
+<h4 id="获得数组类型参数"><a href="#获得数组类型参数" class="headerlink" title="获得数组类型参数"></a>获得数组类型参数</h4><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032108549.png" alt="image-20220425032108549"></p>
+<h4 id="获得集合类型参数"><a href="#获得集合类型参数" class="headerlink" title="获得集合类型参数"></a>获得集合类型参数</h4><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032213000.png" alt="image-20220425032213000"></p>
+<h3 id="参数绑定注解-RequestParam"><a href="#参数绑定注解-RequestParam" class="headerlink" title="参数绑定注解@RequestParam"></a>参数绑定注解@RequestParam</h3><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032311511.png" alt="image-20220425032311511"></p>
+<h3 id="restful风格"><a href="#restful风格" class="headerlink" title="restful风格"></a>restful风格</h3><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032329209.png" alt="image-20220425032329209"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032336310.png" alt="image-20220425032336310"></p>
+<h3 id="获得servlet相关api"><a href="#获得servlet相关api" class="headerlink" title="获得servlet相关api"></a>获得servlet相关api</h3><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032346648.png" alt="image-20220425032346648"></p>
+<h3 id="获得请求头信息"><a href="#获得请求头信息" class="headerlink" title="获得请求头信息"></a>获得请求头信息</h3><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032401411.png" alt="image-20220425032401411"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032410310.png" alt="image-20220425032410310"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032417431.png" alt="image-20220425032417431"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032424474.png" alt="image-20220425032424474"></p>
+<h3 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h3><h4 id="静态资源的开启"><a href="#静态资源的开启" class="headerlink" title="静态资源的开启"></a>静态资源的开启</h4><p>因为是前端控制器找资源（找方法的路径），无法找到静态资源</p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032510998.png" alt="image-20220425032510998"></p>
+<p>方法二：<br>当前端控制器找不到，让原始容器tomcat去找</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;mvc: default-servlet-handler/&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="配置全局乱码过滤器"><a href="#配置全局乱码过滤器" class="headerlink" title="配置全局乱码过滤器"></a>配置全局乱码过滤器</h4><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032624911.png" alt="image-20220425032624911"></p>
+<h4 id="自定义类型转换器"><a href="#自定义类型转换器" class="headerlink" title="自定义类型转换器"></a>自定义类型转换器</h4><p>SpringMVC默认已经提供了一些常用的类型转换器，例如客户端提交的字符串转换成int型进行参数设置。但是不是所有的数据类型都提供了转换器，没有提供的就需要自定义转换器，例如:日期类型的数据就需要自定义转换器。</p>
+<p>自定义类型转换器的开发步骤:<br>1.定义转换器类实现Converter接口）<br>2.在配置文件中声明转换器<br>3.在<annotation-driven>中引用转换器</annotation-driven></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032756509.png" alt="image-20220425032756509"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032807758.png" alt="image-20220425032807758"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032824070.png" alt="image-20220425032824070"></p>
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><h3 id="文件上传原理"><a href="#文件上传原理" class="headerlink" title="文件上传原理"></a>文件上传原理</h3><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032834163.png" alt="image-20220425032834163"></p>
+<h3 id="单文件上传"><a href="#单文件上传" class="headerlink" title="单文件上传"></a>单文件上传</h3><p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032856331.png" alt="image-20220425032856331"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032913690.png" alt="image-20220425032913690"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425032925538.png" alt="image-20220425032925538"></p>
+<h3 id="多文件上传"><a href="#多文件上传" class="headerlink" title="多文件上传"></a>多文件上传</h3><p>多文件上传，只需要将页面修改为多个文件上传项，将方法参数MultipartFile类型修改为MultipartFile[]即可</p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425033003816.png" alt="image-20220425033003816"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/image-20220425033010210.png" alt="image-20220425033010210"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">whc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/">http://example.com/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">WHC 的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://images.pexels.com/photos/2110951/pexels-photo-2110951.jpeg?cs=srgb&amp;dl=pexels-emre-can-acer-2110951.jpg&amp;fm=jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/16/%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/"><img class="prev-cover" src= "/img/loading.gif" data-lazy-src="https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?cs=srgb&amp;dl=pexels-daniel-putzer-633409.jpg&amp;fm=jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">面向切面编程AOP</div></div></a></div><div class="next-post pull-right"><a href="/2021/09/15/springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/"><img class="next-cover" src= "/img/loading.gif" data-lazy-src="https://images.pexels.com/photos/2317711/pexels-photo-2317711.jpeg?cs=srgb&amp;dl=pexels-anni-roenkae-2317711.jpg&amp;fm=jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">springmvc的数据响应</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/cat-32326.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">whc</div><div class="author-info__description">在我一生的黄金时代，我有好多奢望。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82%EF%BC%88%E5%BE%80%E5%90%8E%E4%BC%A0%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">springmvc的数据请求（往后传）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">获得请求参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">请求参数的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">获得基本类型参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97pojo%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">获得pojo类型参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">获得数组类型参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">获得集合类型参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E7%BB%91%E5%AE%9A%E6%B3%A8%E8%A7%A3-RequestParam"><span class="toc-number">1.1.2.</span> <span class="toc-text">参数绑定注解@RequestParam</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#restful%E9%A3%8E%E6%A0%BC"><span class="toc-number">1.1.3.</span> <span class="toc-text">restful风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97servlet%E7%9B%B8%E5%85%B3api"><span class="toc-number">1.1.4.</span> <span class="toc-text">获得servlet相关api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%BF%A1%E6%81%AF"><span class="toc-number">1.1.5.</span> <span class="toc-text">获得请求头信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.6.</span> <span class="toc-text">基础配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%BC%80%E5%90%AF"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">静态资源的开启</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80%E4%B9%B1%E7%A0%81%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">1.1.6.2.</span> <span class="toc-text">配置全局乱码过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="toc-number">1.1.6.3.</span> <span class="toc-text">自定义类型转换器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">1.2.</span> <span class="toc-text">文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.1.</span> <span class="toc-text">文件上传原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">1.2.2.</span> <span class="toc-text">单文件上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">1.2.3.</span> <span class="toc-text">多文件上传</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/09/25/springmvc%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/" title="springmvc异常处理机制">springmvc异常处理机制</a><time datetime="2022-09-25T01:42:04.000Z" title="发表于 2022-09-25 09:42:04">2022-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git常用命令">Git常用命令</a><time datetime="2021-09-27T14:59:40.000Z" title="发表于 2021-09-27 22:59:40">2021-09-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/27/%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%BA%8B%E7%89%A9%E6%8E%A7%E5%88%B6/" title="声明式事物控制">声明式事物控制</a><time datetime="2021-09-27T01:43:13.000Z" title="发表于 2021-09-27 09:43:13">2021-09-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/25/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/" title="springmvc拦截器">springmvc拦截器</a><time datetime="2021-09-25T01:41:41.000Z" title="发表于 2021-09-25 09:41:41">2021-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/25/Jdbctemplate/" title="Jdbctemplate">Jdbctemplate</a><time datetime="2021-09-25T01:41:20.000Z" title="发表于 2021-09-25 09:41:20">2021-09-25</time></div></div></div></div></div></div></main><footer id="footer" style="background: #333333"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By whc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div></div></body></html>
